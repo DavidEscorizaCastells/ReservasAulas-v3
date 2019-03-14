@@ -1,6 +1,8 @@
 package org.iesalandalus.programacion.reservasaulas.modelo.dominio;
 
-public class Profesor {
+import java.io.Serializable;
+
+public class Profesor implements Serializable {
 	static final String ER_CORREO="(\\w+\\.*)+(@[a-zA-Z]+\\.*)([a-zA-Z]){2,5}";
 	static final String ER_TELEFONO="^[69]\\d{8}";
 	
