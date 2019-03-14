@@ -55,12 +55,12 @@ public class ModeloReservasAulas implements IModeloReservasAulas {
 	
 	@Override
 	public void leerAulas() {
-		Aulas.leer();
+		aulas.leer();
 	}
 	
 	@Override
 	public void escribirAulas() {
-		Aulas.escribir();
+		aulas.escribir();
 	}
 	
 	@Override
@@ -95,12 +95,12 @@ public class ModeloReservasAulas implements IModeloReservasAulas {
 	
 	@Override
 	public void leerProfesores() {
-		Profesores.leer();
+		profesores.leer();
 	}
 	
 	@Override
 	public void escribirProfesores() {
-		Profesores.escribir();
+		profesores.escribir();
 	}
 	
 	@Override
@@ -155,11 +155,11 @@ public class ModeloReservasAulas implements IModeloReservasAulas {
 	
 	@Override
 	public void leerReservas() {
-		Reservas.leer();
+		reservas.leer();
 	}
 	
 	@Override
 	public void escribirReservas() {
-		Reservas.escribir();
+		reservas.escribir();
 	}
 }

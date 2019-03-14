@@ -14,7 +14,9 @@ public class VistaReservasAulas implements IVistaReservasAulas {
 	private static final String ERROR="Error: ";
 	private static final String NOMBRE_VALIDO="David Escoriza Castells";
 	private static final String CORREO_VALIDO="lDavi14@hotmail.com";
+	private static final int PUESTOS_VALIDOS=40;
 	private IControladorReservasAulas controlador;
+	
 	
 	public VistaReservasAulas() {
 		Opcion.setVista(this);
@@ -39,7 +41,7 @@ public class VistaReservasAulas implements IVistaReservasAulas {
 	
 	@Override
 	public void salir() {
-		System.out.println("Adios.");
+		controlador.salir();
 	}
 	
 	@Override
@@ -57,7 +59,6 @@ public class VistaReservasAulas implements IVistaReservasAulas {
 	@Override
 	public void borrarAula() {
 		Consola.mostrarCabecera("Borrar aula");
-		final int PUESTOS_VALIDOS=40;
 		try {
 			Aula aula = new Aula(Consola.leerNombreAula(), PUESTOS_VALIDOS);
 			controlador.borrarAula(aula);
@@ -70,7 +71,6 @@ public class VistaReservasAulas implements IVistaReservasAulas {
 	@Override
 	public void buscarAula() {
 		Consola.mostrarCabecera("Buscar aula");
-		final int PUESTOS_VALIDOS=40;
 		Aula aula = null;
 		try {
 			aula = new Aula(Consola.leerNombreAula(), PUESTOS_VALIDOS);
