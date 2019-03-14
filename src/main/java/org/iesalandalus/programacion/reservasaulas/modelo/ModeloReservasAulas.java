@@ -54,6 +54,16 @@ public class ModeloReservasAulas implements IModeloReservasAulas {
 	}
 	
 	@Override
+	public void leerAulas() {
+		Aulas.leer();
+	}
+	
+	@Override
+	public void escribirAulas() {
+		Aulas.escribir();
+	}
+	
+	@Override
 	public List<Profesor> getProfesores() {
 		return profesores.getProfesores();
 	}
@@ -81,6 +91,16 @@ public class ModeloReservasAulas implements IModeloReservasAulas {
 	@Override
 	public void borrarProfesor (Profesor profesor) throws OperationNotSupportedException {
 		profesores.borrar(profesor);
+	}
+	
+	@Override
+	public void leerProfesores() {
+		Profesores.leer();
+	}
+	
+	@Override
+	public void escribirProfesores() {
+		Profesores.escribir();
 	}
 	
 	@Override
@@ -131,5 +151,15 @@ public class ModeloReservasAulas implements IModeloReservasAulas {
 	@Override
 	public boolean consultarDisponibilidad (Aula aula, Permanencia permanencia) {
 		return reservas.consultarDisponibilidad(aula, permanencia);
+	}
+	
+	@Override
+	public void leerReservas() {
+		Reservas.leer();
+	}
+	
+	@Override
+	public void escribirReservas() {
+		Reservas.escribir();
 	}
 }
